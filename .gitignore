@@ -1,0 +1,59 @@
+# Publish only reviewed submission files. New files are ignored until listed here.
+# This affects untracked files; it does not remove files already tracked by Git.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/report.pdf
+!/predict.py
+!/requirements.txt
+!/requirements-research.txt
+!/verify.py
+!/verify_rectangular_candidate.py
+!/radar_model/
+!/model/
+!/research/
+!/tests/
+
+# Production inference and the single selected full-data checkpoint.
+/radar_model/*
+!/radar_model/__init__.py
+!/radar_model/preprocessing.py
+!/radar_model/model.py
+!/radar_model/inference.py
+/model/*
+!/model/model.pt
+!/model/model_config.json
+!/model/training_history.csv
+
+# Report-supporting reproduction and diagnostics, not experimental history.
+/research/*
+!/research/__init__.py
+!/research/README.md
+!/research/spectral.py
+!/research/feature_extraction.py
+!/research/classical.py
+!/research/cnn.py
+!/research/make_splits.py
+!/research/evaluate.py
+!/research/tracks.py
+!/research/signal_quality.py
+!/research/recording_diagnostics.py
+!/research/compare_range_models.py
+!/research/recording_folds.json
+!/research/repeated_folds.json
+!/research/evidence/
+
+# Small summaries for the reported rectangular pipeline only.
+/research/evidence/*
+!/research/evidence/rectangular_classical_pooled.csv
+!/research/evidence/rectangular_cnn_fold_means.csv
+!/research/evidence/rectangular_cnn_pooled.csv
+!/research/evidence/rectangular_quality.csv
+!/research/evidence/rectangular_verification.json
+!/research/evidence/rectangular_range_comparison.csv
+!/research/evidence/rectangular_d1_motion.csv
+!/research/evidence/rectangular_d1_predictions.csv
+
+/tests/*
+!/tests/test_predict.py

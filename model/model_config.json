@@ -1,0 +1,16 @@
+{
+  "model": "peak_aligned_cnn_whole_piece_probability_averaging",
+  "classes": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "human",
+    "bird",
+    "reflector"
+  ],
+  "window": "rectangular",
+  "checkpoint_sha256": "aa491fc2ecd8c06739606140e6e9ccb78ad33a10dbb125dc7eb58440c8cbc989"
+}

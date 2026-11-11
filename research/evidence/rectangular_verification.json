@@ -1,0 +1,19 @@
+{
+  "source": "User-provided verify_rectangular_candidate.py stdout, 2026-11-09; not rerun by the assistant",
+  "checkpoint_sha256": "aa491fc2ecd8c06739606140e6e9ccb78ad33a10dbb125dc7eb58440c8cbc989",
+  "window": "rectangular",
+  "held_out_folds_checked": 12,
+  "saved_segment_probability_max_absolute_error": 0.0,
+  "batch_size_probability_max_absolute_error": 0.0000017335231363713177,
+  "batch_check_tolerances": {"absolute": 0.000001, "relative": 0.00001},
+  "batch_check_labels_identical": true,
+  "runtime_only_copy": true,
+  "ordering_and_labels": true,
+  "n_segments": 15023,
+  "device": "cpu",
+  "cold_seconds": 1.976715800119564,
+  "warm_seconds": 1.0139206000603735,
+  "cpu_model": "not recorded by this check",
+  "post_installation_tests": "not run by the assistant",
+  "report_rebuild_and_visual_review": "pending user execution"
+}

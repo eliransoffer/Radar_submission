@@ -1,0 +1,7 @@
+assignment,role,window,model,quality_bin,n_segments,n_recordings,n_tracks,n_classes,n_valid_contrast,accuracy,class_balanced_recording_accuracy_present_classes,support,n_D1,n_D2,n_D3,n_D4,n_D5,n_D6,n_human,n_bird,n_reflector,recordings_D1,recordings_D2,recordings_D3,recordings_D4,recordings_D5,recordings_D6,recordings_human,recordings_bird,recordings_reflector
+development,development,rectangular,cnn_peak_aligned_whole_track,0,0,0,0,0,0,,,insufficient,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+development,development,rectangular,cnn_peak_aligned_whole_track,1,12335,71,1633,8,12335,0.8881232265910012,0.8026389382264998,supported,1771,293,933,1546,3961,691,124,3016,0,6,4,3,3,3,11,7,34,0
+development,development,rectangular,cnn_peak_aligned_whole_track,2,12334,72,1771,9,12334,0.8695475920220529,0.8333558999000963,supported,681,552,1900,2343,2874,2085,368,1527,4,5,4,3,3,3,11,7,35,1
+development,development,rectangular,cnn_peak_aligned_whole_track,3,12335,67,1766,9,12335,0.9102553708958249,0.8956042128446801,supported,709,1112,2126,2318,1672,2897,634,866,1,5,3,3,3,3,11,7,31,1
+development,development,rectangular,cnn_peak_aligned_whole_track,4,12334,68,1638,9,12334,0.9231392897681207,0.9092823593081205,supported,1089,2410,2635,1389,775,2563,900,561,12,5,3,3,3,3,11,7,30,3
+development,development,rectangular,cnn_peak_aligned_whole_track,5,12335,72,1200,9,12335,0.958573165788407,0.9066561832892577,supported,1100,2997,1213,182,249,552,3179,292,2571,4,3,3,3,3,11,7,24,14
