@@ -6,14 +6,15 @@ Methods, recording-held-out evaluation and limitations are in [report.pdf](repor
 
 ## Install
 
-Use Python 3.12. From the submission folder, in PowerShell:
+Use Python 3.12. From the submission folder, in Bash on Linux/macOS:
 
-```powershell
+```bash
 uv venv --python 3.12
-uv pip install --python .venv/Scripts/python.exe -r requirements.txt
+uv pip install --python .venv/bin/python -r requirements.txt
 ```
 
-No activation is needed. On Linux/macOS, use `.venv/bin/python` instead.
+No activation is needed. For Git Bash on Windows, replace `.venv/bin/python`
+with `.venv/Scripts/python.exe` in the commands below and above.
 
 ## Prediction interface
 
@@ -48,8 +49,8 @@ The dataset is not included in this repository.
 
 Call `predict()` on five real segments, treated as singleton pieces for this smoke check:
 
-```powershell
-@'
+```bash
+uv run --no-project --python .venv/bin/python python - <<'PY'
 import numpy as np
 from predict import predict
 
@@ -60,22 +61,22 @@ with np.load("data/radar_segments.npz", allow_pickle=False) as data:
         np.arange(n), data["time_s"][:n],
     )
 print(labels)
-'@ | uv run --no-project --python .venv/Scripts/python.exe python -
+PY
 ```
 
 It should print five valid class names; this is not an accuracy evaluation.
 For the approximately 15,000-segment CPU check, preserving complete pieces:
 
-```powershell
-uv run --no-project --python .venv/Scripts/python.exe verify.py benchmark --data data/radar_segments.npz
+```bash
+uv run --no-project --python .venv/bin/python python verify.py benchmark --data data/radar_segments.npz
 ```
 
 Dataset loading is excluded from the reported inference timings.
 
 Additional API checks:
 
-```powershell
-uv run --no-project --python .venv/Scripts/python.exe -m unittest discover -s tests -v
+```bash
+uv run --no-project --python .venv/bin/python python -m unittest discover -s tests -v
 ```
 
 Saved verification evidence predates the final readability edits; rerun these
